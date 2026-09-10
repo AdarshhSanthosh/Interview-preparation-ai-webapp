@@ -4,6 +4,10 @@ Your AI-powered path to interview success.
 
 A working prototype of an AI interview preparation app: upload a resume, describe the target role, and get a personalized set of interview questions with model answers, company research, an expected interview process, a live conversational AI interview, and a scored feedback report — all powered by the free tier of the Gemini API.
 
+**🚀 [Try the live demo](https://interview-preparation-ai-webapp.vercel.app/)**
+
+> The live demo runs on the maintainer's free-tier Gemini API key, shared by everyone who visits. If it's busy or you hit a rate-limit error, wait a minute and try again — or run it locally with your own free key (takes about 2 minutes, see below) for a dedicated, uninterrupted experience.
+
 ## Stack
 
 - **Next.js 16** (App Router) + **TypeScript**
@@ -13,30 +17,43 @@ A working prototype of an AI interview preparation app: upload a resume, describ
 
 This is a prototype: state lives in the browser (`sessionStorage`) rather than a database, and there are no user accounts. See "Scope" below.
 
-## Setup
+## Run it locally with your own API key
 
-1. Install dependencies:
+1. Clone the repo and install dependencies:
 
    ```bash
+   git clone https://github.com/AdarshhSanthosh/Interview-preparation-ai-webapp.git
+   cd Interview-preparation-ai-webapp
    npm install
    ```
 
-2. Add your Gemini API key:
+2. Get a **free** Gemini API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey) — sign in with any Google account, click "Create API key," and copy it. No credit card or billing setup needed for the free tier.
+
+3. Add it to a local env file:
 
    ```bash
    cp .env.local.example .env.local
-   # then edit .env.local and paste your key
    ```
 
-   Get a free key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+   Then open `.env.local` and paste your key:
 
-3. Run the dev server:
+   ```
+   GEMINI_API_KEY=your-key-here
+   ```
+
+   `.env.local` is git-ignored, so your key never gets committed — keep it out of any commit or public conversation.
+
+4. Run the dev server:
 
    ```bash
    npm run dev
    ```
 
-   Open [http://localhost:3000](http://localhost:3000).
+   Open [http://localhost:3000](http://localhost:3000). This copy is fully yours — no shared rate limit, no waiting on anyone else's usage.
+
+### Deploying your own copy
+
+The live demo above is deployed on [Vercel](https://vercel.com) directly from this repo. To deploy your own: import this repo at [vercel.com/new](https://vercel.com/new), leave the default Next.js build settings, and add one environment variable — `GEMINI_API_KEY` — with your own key from step 2 above.
 
 ## How it works
 
