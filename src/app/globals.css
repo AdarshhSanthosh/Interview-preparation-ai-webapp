@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: oklch(15% 0.018 262);
+  --bg-deep: oklch(11.5% 0.016 260);
+  --surface: oklch(21% 0.024 262);
+  --surface-2: oklch(25% 0.028 262);
+  --border: oklch(80% 0.02 262 / 0.1);
+  --border-strong: oklch(85% 0.03 262 / 0.2);
+  --text: oklch(97% 0.004 260);
+  --text-2: oklch(75% 0.018 260);
+  --text-3: oklch(56% 0.02 262);
+  --blue: oklch(68% 0.19 258);
+  --violet: oklch(68% 0.19 306);
+  --success: oklch(74% 0.14 152);
+  --warning: oklch(78% 0.13 78);
+  --danger: oklch(66% 0.19 25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--violet);
+}
+
+.grad-bg {
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+}
+
+.grad-text {
+  background: linear-gradient(135deg, var(--blue), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow-blue {
+  box-shadow: 0 0 40px oklch(68% 0.19 258 / 0.32);
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.pulse-dot {
+  animation: pulse-dot 1.4s infinite;
+}
+
+::selection {
+  background: oklch(68% 0.19 258 / 0.35);
+}

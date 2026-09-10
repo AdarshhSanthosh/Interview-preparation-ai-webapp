@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:oklch(15% 0.018 262);
+      --surface:oklch(21% 0.024 262);
+      --surface-2:oklch(25% 0.028 262);
+      --border:oklch(80% 0.02 262 / 0.10);
+      --border-strong:oklch(85% 0.03 262 / 0.20);
+      --text:oklch(97% 0.004 260);
+      --text-2:oklch(75% 0.018 260);
+      --text-3:oklch(56% 0.02 262);
+      --blue:oklch(68% 0.19 258);
+      --violet:oklch(68% 0.19 306);
+      --danger:oklch(66% 0.19 25);
+      --grad:linear-gradient(135deg, var(--blue), var(--violet));
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    p{margin:0;}
+    button{font-family:inherit;cursor:pointer;border:none;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  </style>
+</helmet>
+
+<div style="width:1200px;height:900px;background:var(--bg);display:flex;flex-direction:column;overflow:hidden;">
+
+  <!-- TOP BAR -->
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--border);">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:32px;height:32px;border-radius:9px;background:var(--grad);display:flex;align-items:center;justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg>
+      </div>
+      <span style="font-family:'Space Grotesk';font-weight:700;font-size:16px;">Live Interview</span>
+      <div style="display:flex;align-items:center;gap:7px;background:oklch(66% 0.19 25 / 0.14);padding:5px 12px;border-radius:999px;">
+        <span style="width:7px;height:7px;border-radius:50%;background:var(--danger);animation:pulse 1.6s infinite;"></span>
+        <span style="font-size:11.5px;font-weight:600;color:var(--danger);">04:32</span>
+      </div>
+    </div>
+    <button style="background:transparent;border:1px solid var(--border-strong);color:var(--text-2);padding:9px 18px;border-radius:10px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      End Interview
+    </button>
+  </div>
+
+  <!-- CONTEXT + PROGRESS -->
+  <div style="padding:18px 40px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid var(--border);">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="var(--violet)"/></svg>
+      </div>
+      <div>
+        <div style="font-size:13.5px;font-weight:600;">InterviewIQ AI Interviewer</div>
+        <div style="font-size:12px;color:var(--text-3);">Interviewing for: Senior Frontend Engineer @ Stripe</div>
+      </div>
+      <span style="margin-left:auto;font-size:12px;color:var(--text-3);">Question 3 of ~8</span>
+    </div>
+    <div style="height:4px;width:100%;border-radius:2px;background:var(--surface-2);">
+      <div style="height:100%;width:38%;border-radius:2px;background:var(--grad);"></div>
+    </div>
+  </div>
+
+  <!-- TRANSCRIPT -->
+  <div style="flex:1;padding:32px 40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;">
+
+    <!-- AI message -->
+    <div style="display:flex;gap:12px;max-width:640px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="var(--violet)"/></svg>
+      </div>
+      <div style="background:oklch(68% 0.19 306 / 0.10);border:1px solid oklch(68% 0.19 306 / 0.25);border-radius:4px 18px 18px 18px;padding:16px 20px;font-size:14.5px;line-height:1.6;">
+        Tell me about your most recent project and the biggest technical challenge you faced.
+      </div>
+    </div>
+
+    <!-- User message -->
+    <div style="display:flex;gap:12px;max-width:640px;align-self:flex-end;flex-direction:row-reverse;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:white;font-family:'Space Grotesk';">YOU</div>
+      <div style="background:oklch(68% 0.19 258 / 0.14);border:1px solid oklch(68% 0.19 258 / 0.3);border-radius:18px 4px 18px 18px;padding:16px 20px;font-size:14.5px;line-height:1.6;">
+        I recently rebuilt our analytics dashboard to handle real-time data streams. The biggest challenge was avoiding unnecessary re-renders when data updated multiple times per second, so I introduced windowed virtualization and memoized the chart components.
+      </div>
+    </div>
+
+    <!-- AI follow-up -->
+    <div style="display:flex;gap:12px;max-width:640px;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="var(--violet)"/></svg>
+      </div>
+      <div style="background:oklch(68% 0.19 306 / 0.10);border:1px solid oklch(68% 0.19 306 / 0.25);border-radius:4px 18px 18px 18px;padding:16px 20px;font-size:14.5px;line-height:1.6;">
+        That's interesting — why did you choose windowed virtualization over simply throttling the update frequency?
+      </div>
+    </div>
+
+    <!-- typing indicator -->
+    <div style="display:flex;gap:12px;max-width:640px;align-self:flex-end;flex-direction:row-reverse;">
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:white;font-family:'Space Grotesk';">YOU</div>
+      <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:18px 4px 18px 18px;padding:16px 20px;display:flex;gap:5px;align-items:center;">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--text-3);animation:pulse 1.2s infinite;"></span>
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--text-3);animation:pulse 1.2s infinite 0.2s;"></span>
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--text-3);animation:pulse 1.2s infinite 0.4s;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT BAR -->
+  <div style="padding:20px 40px 28px;border-top:1px solid var(--border);">
+    <div style="display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:8px 8px 8px 20px;">
+      <span style="flex:1;font-size:14.5px;color:var(--text-3);">Type your answer...</span>
+      <button style="width:40px;height:40px;border-radius:12px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 19v3"/></svg>
+      </button>
+      <button style="width:40px;height:40px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg>
+      </button>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

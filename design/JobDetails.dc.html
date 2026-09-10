@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:oklch(15% 0.018 262);
+      --surface:oklch(21% 0.024 262);
+      --surface-2:oklch(25% 0.028 262);
+      --border:oklch(80% 0.02 262 / 0.10);
+      --border-strong:oklch(85% 0.03 262 / 0.20);
+      --text:oklch(97% 0.004 260);
+      --text-2:oklch(75% 0.018 260);
+      --text-3:oklch(56% 0.02 262);
+      --blue:oklch(68% 0.19 258);
+      --violet:oklch(68% 0.19 306);
+      --success:oklch(74% 0.14 152);
+      --grad:linear-gradient(135deg, var(--blue), var(--violet));
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;margin:0;letter-spacing:-0.02em;}
+    p{margin:0;}
+    a{color:var(--blue);text-decoration:none;}
+    a:hover{color:var(--violet);}
+    button{font-family:inherit;cursor:pointer;border:none;}
+    label{font-size:13px;font-weight:600;color:var(--text-2);}
+    input,textarea{font-family:inherit;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;color:var(--text);padding:14px 16px;font-size:14.5px;width:100%;outline:none;}
+    input::placeholder,textarea::placeholder{color:var(--text-3);}
+    textarea{resize:none;line-height:1.6;}
+  </style>
+</helmet>
+
+<div style="width:1440px;height:1020px;background:var(--bg);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-260px;left:50%;transform:translateX(-50%);width:820px;height:560px;background:radial-gradient(circle, var(--violet) 0%, transparent 70%);opacity:0.14;filter:blur(70px);pointer-events:none;"></div>
+
+  <!-- NAV -->
+  <div style="position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;height:88px;padding:0 96px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg>
+      </div>
+      <span style="font-family:'Space Grotesk';font-weight:700;font-size:20px;">Interview<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;">IQ</span></span>
+    </div>
+    <a href="#" style="color:var(--text-3);font-size:14px;">Exit</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div style="position:relative;z-index:1;max-width:640px;margin:8px auto 0;display:flex;flex-direction:column;align-items:center;gap:28px;padding:0 24px;">
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:10px;width:280px;">
+      <div style="display:flex;width:100%;gap:8px;">
+        <div style="height:4px;flex:1;border-radius:2px;background:var(--grad);"></div>
+        <div style="height:4px;flex:1;border-radius:2px;background:var(--grad);"></div>
+      </div>
+      <span style="font-size:12px;font-weight:600;color:var(--text-3);letter-spacing:0.04em;">STEP 2 OF 2 — JOB DETAILS</span>
+    </div>
+
+    <!-- uploaded file chip -->
+    <div style="display:flex;align-items:center;justify-content:space-between;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px 20px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div style="width:40px;height:40px;border-radius:10px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+        </div>
+        <div>
+          <div style="font-size:14px;font-weight:600;">resume_final.pdf</div>
+          <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--success);">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Uploaded · 1.2 MB
+          </div>
+        </div>
+      </div>
+      <a href="#" style="font-size:13px;font-weight:600;">Change</a>
+    </div>
+
+    <div style="text-align:center;display:flex;flex-direction:column;gap:10px;">
+      <h1 style="font-size:32px;font-weight:700;">Tell us about the role</h1>
+      <p style="color:var(--text-2);font-size:15.5px;max-width:480px;">The more details you share, the more personalized your prep will be.</p>
+    </div>
+
+    <!-- form -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px;width:100%;display:flex;flex-direction:column;gap:22px;">
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label>Job Role / Position</label>
+        <input type="text" placeholder="e.g. Senior Frontend Engineer">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label>Company Name</label>
+        <input type="text" placeholder="e.g. Stripe, Google, or your target company">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <label>Experience Level</label>
+        <div style="display:flex;gap:10px;">
+          <button style="flex:1;padding:12px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);font-size:14px;font-weight:600;">Beginner</button>
+          <button style="flex:1;padding:12px;border-radius:12px;background:var(--grad);color:white;font-size:14px;font-weight:600;">Intermediate</button>
+          <button style="flex:1;padding:12px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);font-size:14px;font-weight:600;">Expert</button>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label>Job Description <span style="color:var(--text-3);font-weight:400;">(optional)</span></label>
+        <textarea rows="4" placeholder="Paste the job description for even more tailored questions..."></textarea>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+      <a href="#" style="font-size:14px;font-weight:600;color:var(--text-2);">← Back to upload</a>
+      <button style="background:var(--grad);color:white;padding:16px 28px;border-radius:14px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;box-shadow:0 0 40px oklch(68% 0.19 258 / 0.3);">
+        <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg>
+        Generate My Interview Prep
+      </button>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

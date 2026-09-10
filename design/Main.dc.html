@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:oklch(15% 0.018 262);
+      --bg-deep:oklch(11.5% 0.016 260);
+      --surface:oklch(21% 0.024 262);
+      --surface-2:oklch(25% 0.028 262);
+      --border:oklch(80% 0.02 262 / 0.10);
+      --border-strong:oklch(85% 0.03 262 / 0.20);
+      --text:oklch(97% 0.004 260);
+      --text-2:oklch(75% 0.018 260);
+      --text-3:oklch(56% 0.02 262);
+      --blue:oklch(68% 0.19 258);
+      --violet:oklch(68% 0.19 306);
+      --grad:linear-gradient(135deg, var(--blue), var(--violet));
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;margin:0;letter-spacing:-0.02em;}
+    p{margin:0;}
+    a{color:var(--blue);text-decoration:none;}
+    a:hover{color:var(--violet);}
+    button{font-family:inherit;cursor:pointer;border:none;}
+    .container{max-width:1320px;margin:0 auto;padding:0 96px;}
+  </style>
+</helmet>
+
+<div style="width:1440px;background:var(--bg);">
+
+  <!-- NAV -->
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:88px;position:relative;z-index:2;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:36px;height:36px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg>
+      </div>
+      <span style="font-family:'Space Grotesk';font-weight:700;font-size:20px;">Interview<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;">IQ</span></span>
+    </div>
+    <div style="display:flex;align-items:center;gap:40px;">
+      <a href="#" style="color:var(--text-2);font-size:15px;">Features</a>
+      <a href="#" style="color:var(--text-2);font-size:15px;">How it works</a>
+    </div>
+    <button style="background:var(--grad);color:white;padding:10px 22px;border-radius:999px;font-weight:600;font-size:14px;">Get Started</button>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative;overflow:hidden;padding-top:96px;padding-bottom:64px;">
+    <div style="position:absolute;top:-220px;left:50%;transform:translateX(-60%);width:760px;height:560px;background:radial-gradient(circle, var(--blue) 0%, transparent 70%);opacity:0.22;filter:blur(60px);pointer-events:none;"></div>
+    <div style="position:absolute;top:-160px;left:50%;transform:translateX(10%);width:640px;height:520px;background:radial-gradient(circle, var(--violet) 0%, transparent 70%);opacity:0.20;filter:blur(60px);pointer-events:none;"></div>
+
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:28px;max-width:860px;margin:0 auto;padding:0 24px;text-align:center;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border-strong);padding:8px 16px;border-radius:999px;font-size:13px;font-weight:600;color:var(--text-2);">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="var(--blue)"/></svg>
+        AI INTERVIEW COACH
+      </div>
+
+      <h1 style="font-size:64px;line-height:1.06;font-weight:700;max-width:820px;">Walk into every interview already prepared.</h1>
+
+      <div style="font-family:'Space Grotesk';font-weight:600;font-size:24px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;">
+        Your AI-powered path to interview success.
+      </div>
+
+      <p style="font-size:17px;line-height:1.65;color:var(--text-2);max-width:620px;">
+        Upload your resume, tell us the role you're chasing, and InterviewIQ builds a personalized prep plan — real questions, tailored answers, company insight, and a live AI interview to practice against.
+      </p>
+
+      <div style="display:flex;gap:16px;margin-top:8px;">
+        <button style="background:var(--grad);color:white;padding:16px 28px;border-radius:14px;font-weight:600;font-size:16px;display:flex;align-items:center;gap:10px;box-shadow:0 0 40px oklch(68% 0.19 258 / 0.35);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.6 4.4 0 0 1 0-9 5.5 5.5 0 0 1 10.7-2A4.5 4.5 0 0 1 19 18H7Z"/><path d="M12 12v7"/><path d="M9.5 14.5 12 12l2.5 2.5"/></svg>
+          Upload Your CV
+        </button>
+        <button style="background:transparent;border:1px solid var(--border-strong);color:var(--text);padding:16px 28px;border-radius:14px;font-weight:600;font-size:16px;">See how it works</button>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;color:var(--text-3);font-size:13px;margin-top:4px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--text-3)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8.5 8 11 4.5-2.5 8-6 8-11V5z"/></svg>
+        Your resume stays private — analyzed securely, never shared.
+      </div>
+    </div>
+
+    <!-- product visual -->
+    <div style="position:relative;z-index:1;max-width:1040px;margin:64px auto 0;padding:0 24px;">
+      <div style="background:oklch(21% 0.024 262 / 0.7);backdrop-filter:blur(20px);border:1px solid var(--border-strong);border-radius:28px;padding:40px;display:grid;grid-template-columns:1.5fr 1fr;gap:32px;box-shadow:0 40px 100px oklch(10% 0.02 260 / 0.5);">
+        <div style="display:flex;flex-direction:column;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <span style="background:oklch(68% 0.19 258 / 0.16);color:var(--blue);font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;">TECHNICAL</span>
+            <span style="color:var(--text-3);font-size:12px;">Intermediate</span>
+          </div>
+          <div style="font-size:15px;font-weight:500;line-height:1.5;">"Walk me through how you optimized rendering performance in your React dashboard."</div>
+          <div style="display:flex;align-items:center;gap:8px;color:var(--blue);font-size:13px;font-weight:600;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            Personalized answer ready
+          </div>
+          <div style="height:1px;background:var(--border);"></div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="height:8px;width:100%;background:var(--surface-2);border-radius:4px;"></div>
+            <div style="height:8px;width:88%;background:var(--surface-2);border-radius:4px;"></div>
+            <div style="height:8px;width:65%;background:var(--surface-2);border-radius:4px;"></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;">
+          <div style="position:relative;width:132px;height:132px;border-radius:50%;background:conic-gradient(var(--blue) 0deg, var(--violet) 320deg, var(--surface-2) 320deg);display:flex;align-items:center;justify-content:center;">
+            <div style="width:106px;height:106px;border-radius:50%;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+              <div style="font-family:'Space Grotesk';font-size:30px;font-weight:700;">92</div>
+              <div style="font-size:10px;color:var(--text-3);">/ 100</div>
+            </div>
+          </div>
+          <div style="font-size:13px;font-weight:600;color:var(--text-2);">Interview Ready</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div style="background:var(--bg-deep);padding:120px 0;">
+    <div class="container">
+      <div style="text-align:center;max-width:640px;margin:0 auto 64px;display:flex;flex-direction:column;gap:16px;align-items:center;">
+        <span style="color:var(--blue);font-size:13px;font-weight:600;letter-spacing:0.08em;">FEATURES</span>
+        <h2 style="font-size:38px;font-weight:700;">Everything you need to walk in ready</h2>
+        <p style="color:var(--text-2);font-size:16px;line-height:1.6;">One platform that turns your resume and target role into a complete, personalized prep plan.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(4, minmax(0,1fr));gap:24px;">
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:16px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:oklch(68% 0.19 258 / 0.14);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:600;">Personalized Questions</h3>
+          <p style="color:var(--text-2);font-size:14px;line-height:1.65;">Generated from your actual resume, skills and the exact role you're targeting — never generic.</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:16px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:oklch(68% 0.19 306 / 0.14);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v15"/><path d="M14 9h5a1 1 0 0 1 1 1v11"/><path d="M9 8h.01M9 12h.01M9 16h.01M4 21h16"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:600;">Company Research</h3>
+          <p style="color:var(--text-2);font-size:14px;line-height:1.65;">See how your target company typically interviews, common rounds, and topics that come up.</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:16px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:oklch(68% 0.19 258 / 0.14);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4z"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:600;">Live AI Interview</h3>
+          <p style="color:var(--text-2);font-size:14px;line-height:1.65;">Practice a real back-and-forth conversation with an AI interviewer that asks natural follow-ups.</p>
+        </div>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;display:flex;flex-direction:column;gap:16px;">
+          <div style="width:48px;height:48px;border-radius:12px;background:oklch(68% 0.19 306 / 0.14);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.75"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--violet)"/></svg>
+          </div>
+          <h3 style="font-size:18px;font-weight:600;">Actionable Feedback</h3>
+          <p style="color:var(--text-2);font-size:14px;line-height:1.65;">Get scored on communication, technical depth and structure — plus exactly what to practice next.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div style="padding:120px 0;">
+    <div class="container">
+      <div style="text-align:center;max-width:640px;margin:0 auto 72px;display:flex;flex-direction:column;gap:16px;align-items:center;">
+        <span style="color:var(--violet);font-size:13px;font-weight:600;letter-spacing:0.08em;">HOW IT WORKS</span>
+        <h2 style="font-size:38px;font-weight:700;">From resume to ready, in four steps</h2>
+      </div>
+
+      <div style="position:relative;display:flex;justify-content:space-between;">
+        <div style="position:absolute;top:28px;left:12.5%;right:12.5%;height:2px;background:var(--border);"></div>
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;width:25%;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--surface);border:1.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center;z-index:1;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+          </div>
+          <div style="font-family:'Space Grotesk';font-weight:600;font-size:16px;">Upload your CV</div>
+          <p style="text-align:center;color:var(--text-3);font-size:13px;max-width:200px;line-height:1.5;">We read your skills, projects and experience.</p>
+        </div>
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;width:25%;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--surface);border:1.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center;z-index:1;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div style="font-family:'Space Grotesk';font-weight:600;font-size:16px;">Tell us the role</div>
+          <p style="text-align:center;color:var(--text-3);font-size:13px;max-width:200px;line-height:1.5;">Job title, company and experience level.</p>
+        </div>
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;width:25%;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--surface);border:1.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center;z-index:1;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4z"/></svg>
+          </div>
+          <div style="font-family:'Space Grotesk';font-weight:600;font-size:16px;">Practice & review</div>
+          <p style="text-align:center;color:var(--text-3);font-size:13px;max-width:200px;line-height:1.5;">Study personalized Q&As or go live with the AI.</p>
+        </div>
+        <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;width:25%;">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--surface);border:1.5px solid var(--border-strong);display:flex;align-items:center;justify-content:center;z-index:1;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.75"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="var(--violet)"/></svg>
+          </div>
+          <div style="font-family:'Space Grotesk';font-weight:600;font-size:16px;">Get feedback</div>
+          <p style="text-align:center;color:var(--text-3);font-size:13px;max-width:200px;line-height:1.5;">See your scores and what to sharpen next.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div style="position:relative;overflow:hidden;background:var(--surface);padding:100px 96px;">
+    <div style="position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:700px;height:400px;background:radial-gradient(circle, var(--blue) 0%, transparent 70%);opacity:0.18;filter:blur(60px);pointer-events:none;"></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;">
+      <h2 style="font-size:34px;font-weight:700;max-width:600px;">Your next interview starts with better prep.</h2>
+      <div style="font-family:'Space Grotesk';font-weight:600;font-size:17px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;">Your AI-powered path to interview success.</div>
+      <button style="margin-top:12px;background:var(--grad);color:white;padding:18px 36px;border-radius:14px;font-weight:600;font-size:16px;box-shadow:0 0 40px oklch(68% 0.19 258 / 0.35);">Start Preparing Now</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:32px 96px;border-top:1px solid var(--border);">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:26px;height:26px;border-radius:8px;background:var(--grad);display:flex;align-items:center;justify-content:center;">
+        <svg width="13" height="13" viewBox="0 0 24 24"><path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="white"/></svg>
+      </div>
+      <span style="color:var(--text-3);font-size:13px;">© 2026 InterviewIQ</span>
+    </div>
+    <div style="display:flex;gap:24px;">
+      <a href="#" style="color:var(--text-3);font-size:13px;">Privacy</a>
+      <a href="#" style="color:var(--text-3);font-size:13px;">Terms</a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
